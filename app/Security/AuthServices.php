@@ -16,7 +16,7 @@ class AuthServices
 
     public function __construct()
     {
-        $this->logger = MonologConfig::getConfig('security',request(),false);
+        $this->logger = MonologConfig::getSecurityLogger();
         $this->provider = SecurityConfiguration::$provider;
 
     }

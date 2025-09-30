@@ -41,7 +41,7 @@ class AuthenticationFilter implements FilterInterface
     public function __construct()
     {
         $this->jwtConfig = new JwtConfig();
-        $this->logger    = MonologConfig::getConfig('security',request(),false);
+        $this->logger    = MonologConfig::getSecurityLogger();
     }
 
     /**
