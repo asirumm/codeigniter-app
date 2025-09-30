@@ -2,7 +2,6 @@
 
 namespace App\Security;
 
-use App\ApplicationConfiguration\ContainerService;
 use App\ApplicationConfiguration\JwtConfig;
 use App\ApplicationConfiguration\MonologConfig;
 use App\ApplicationConfiguration\SecurityConfiguration;
@@ -33,6 +32,9 @@ class AuthServices
         $result = $this->provider->authenticate($username,$password);
 
         if ($result!=null){
+
+            $this->logger->debug("user berhasil ditemukan {$username}");
+
             $this->user = new AbstractUser();
             $this->user->setUsername($result[JwtConfig::$credentialUserPayload]);
             $this->user->setRoles((array($result[JwtConfig::$roleUserPayload])));
