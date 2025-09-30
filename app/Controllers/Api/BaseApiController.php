@@ -13,7 +13,7 @@ abstract class BaseApiController extends ResourceController
 
     public function __construct()
     {
-        $this->logger = MonologConfig::getConfig('application',request(),false);
+        $this->logger = MonologConfig::getApplicationLogger();
     }
 
     protected function responseSuccess($data,$message='')
