@@ -16,7 +16,8 @@
         "firebase/php-jwt": "^6.11",
         "laminas/laminas-escaper": "^2.17",
         "monolog/monolog": "*",
-        "psr/log": "^3.0"
+        "psr/log": "^3.0",
+      "google/apiclient": "*"
     },
     "require-dev": {
         "codeigniter/phpstan-codeigniter": "1.x-dev",
