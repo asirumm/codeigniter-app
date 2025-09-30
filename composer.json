@@ -14,6 +14,7 @@
         "ext-intl": "*",
         "ext-mbstring": "*",
         "laminas/laminas-escaper": "^2.17",
+        "monolog/monolog": "*",
         "psr/log": "^3.0"
     },
     "require-dev": {
@@ -89,7 +90,6 @@
             "CodeIgniter\\ComposerScripts::postUpdate"
         ],
         "post-autoload-dump": [
-            "@composer update --ansi --working-dir=utils"
         ],
         "analyze": [
             "Composer\\Config::disableProcessTimeout",

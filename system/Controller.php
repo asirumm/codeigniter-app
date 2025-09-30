@@ -57,7 +57,7 @@ class Controller
      *
      * @var LoggerInterface
      */
-    protected $logger;
+    protected $log;
 
     /**
      * Should enforce HTTPS access for all methods in this controller.
@@ -84,7 +84,7 @@ class Controller
     {
         $this->request  = $request;
         $this->response = $response;
-        $this->logger   = $logger;
+        $this->log   = $logger;
 
         if ($this->forceHTTPS > 0) {
             $this->forceHTTPS($this->forceHTTPS);
