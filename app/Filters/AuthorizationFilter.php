@@ -26,7 +26,7 @@ class AuthorizationFilter implements FilterInterface
 
     public function before(RequestInterface $request, $arguments = null)
     {
-        $logger         = MonologConfig::getConfig('security',request(),false);
+        $logger         = MonologConfig::getSecurityLogger();
         $authService    = new AuthServices();
         $jwtConfig      = new JwtConfig();
 

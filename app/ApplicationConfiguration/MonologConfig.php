@@ -14,7 +14,17 @@ use Monolog\Logger;
  * */
 class MonologConfig
 {
-    public static function getConfig(string $channel,IncomingRequest $request,bool $productionLog=false): Logger
+    public static function getApplicationLogger()
+    {
+        return self::getConfig('application',request(),false);
+    }
+
+    public static function getSecurityLogger()
+    {
+        return self::getConfig('security',request(),false);
+    }
+
+    private static function getConfig(string $channel,IncomingRequest $request,bool $productionLog=false): Logger
     {
         $logger = new Logger($channel);
 
