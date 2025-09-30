@@ -4,6 +4,7 @@ namespace Config;
 
 use App\Filters\AuthenticationFilter;
 use App\Filters\AuthorizationFilter;
+use App\Filters\GoogleOauthAuthenticationFilter;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -38,6 +39,7 @@ class Filters extends BaseFilters
         'performance'   => PerformanceMetrics::class,
         'authentication'=>AuthenticationFilter::class,
         'authorization'=>AuthorizationFilter::class,
+        'googleOauthAuthentication'=>GoogleOauthAuthenticationFilter::class
     ];
 
     /**
