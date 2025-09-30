@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\ApplicationConfiguration\SecurityConfiguration;
 use CodeIgniter\Events\Events;
 use CodeIgniter\Exceptions\FrameworkException;
 use CodeIgniter\HotReloader\HotReloader;
@@ -52,4 +53,9 @@ Events::on('pre_system', static function (): void {
             });
         }
     }
+});
+
+
+Events::on('pre_system',static function () {
+    SecurityConfiguration::init();
 });
